@@ -20,27 +20,42 @@
         <section class="search-product">
           <h2 class="visually-hidden">Поиск товара</h2>
           <form class="appointment-form" action="https://echo.htmlacademy.ru/" method="post">
-            <img src="images/search.svg" width="16" height="16" alt="">
-            <input type="text" id="appointment-data" placeholder="Текст поиска">
-            <button class="button" type="submit">Найти</button>
+            <input class="appointment-search" type="text" id="appointment-data" placeholder="Текст поиска">
+            <button class="appointment-button-search" type="submit">Найти</button>
           </form>
         </section>
         <nav class="navigation">
           <ul class="navigation-list">
             <li class="navigation-item">
-              <img src="images/account.svg" width="13" height="12" alt="" class="navigation-image">
-              <a href="#" class="navigation-link">Войти</a>
+              <a class="navigation-link" href="#"">Войти
+                <svg class=" navigation-icons" aria-hidden="true" focusable="false" width="13" height="13"
+                viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M0 12.39h13c-.2-2.6-2.1-4.8-4.7-5.5 1-.6 1.7-1.7 1.7-3 0-1.9-1.6-3.5-3.5-3.5S3 1.99 3 3.89c0 1.3.7 2.4 1.7 3-2.6.7-4.5 2.9-4.7 5.5Z"
+                  fill="#000" />
+                </svg>
+              </a>
+            </li>
+            <li class=" navigation-item">
+              <a href="catalog.html" class="navigation-link link-hidden">Выйти</a>
             </li>
             <li class="navigation-item">
-              <a href="#" class="navigation-link visually-hidden">Выйти</a>
+              <a href="#" class="navigation-link">Сравнить
+                <svg class="navigation-icons" aria-hidden="true" focusable="false" width="10" height="13"
+                  viewBox="0 0 10 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6 .39H4v12h2v-12ZM2 4.39H0v8h2v-8ZM10 3.39H8v9h2v-9Z" fill="#000" />
+                </svg>
+              </a>
             </li>
             <li class="navigation-item">
-              <img src="images/compare.svg" width="10" height="12" alt="" class="navigation-image">
-              <a href="#" class="navigation-link">Сравнить</a>
-            </li>
-            <li class="navigation-item">
-              <img src="images/basket.svg" width="16" height="14" alt="" class="navigation-image">
-              <a href="#" class="navigation-link">Корзина</a>
+              <a href="#" class="navigation-link">Корзина<svg class="navigation-icons" width="16" height="15"
+                  viewBox="0 0 16 15" aria-hidden="true" focusable="false" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="m15.3 5.39-3.5.2L8.6.69c-.1-.2-.4-.3-.6-.3-.2 0-.5.1-.6.3l-3.2 4.9H.7c-.4 0-.7.3-.7.7v.2l1.9 6.8c.2.7.7 1.1 1.4 1.1h9.4c.7 0 1.2-.4 1.4-1.1l1.9-6.9v-.2c0-.4-.3-.8-.7-.8ZM8 2.29l2.2 3.2H5.9L8 2.29Z"
+                    fill="#000" />
+                </svg>
+              </a>
             </li>
           </ul>
         </nav>
@@ -48,7 +63,8 @@
       <div class="advantages-information-container">
         <section class="catalog-items">
           <h2 class="catalog-name">Каталог товаров</h2>
-          <button type="button">Открыть каталог</button>
+          <button class="button-catalog" type="button">
+            <span class="visually-hidden">Открыть каталог</span></button>
         </section>
         <ul class="advantages-information">
           <li class="advantages-information-item">
@@ -138,10 +154,10 @@
               </ul>
             </fieldset>
 
-            <button class="button" type="submit">Показать</button>
+            <button class="filter-button button-frame" type="submit">Показать</button>
           </form>
         </aside>
-        <div class="catalog-cointainer">
+        <div class="catalog-container">
           <div class="select-control-container">
             <p class="filter-text">Сортировка:</p>
             <select class="select-control" aria-label="Сортировка">
@@ -149,13 +165,11 @@
               <option value="not-popular">Высокий рейтинг</option>
             </select>
             <div class="pagination-button-container">
-              <button class="filter-pagination-button" type="button">
+              <button class="filter-pagination-button button-sort-up" type="button">
                 <span class="visually-hidden">Сначала дорогие</span>
-                <img src="images/sort_up.svg" alt="" width="11" height="10" class="filter-pagination-img">
               </button>
-              <button class="filter-pagination-button" type="button">
+              <button class="filter-pagination-button button-sort-down" type="button">
                 <span class="visually-hidden">Сначала дешевые</span>
-                <img src="images/sort_down.svg" alt="" width="11" height="10" class="filter-pagination-img">
               </button>
             </div>
           </div>
@@ -230,10 +244,11 @@
       <section class="footer-contacts">
         <h2 class="visually-hidden">Контакты</h2>
         <a href="index.html" class="footer-contacts-logo">
-          <img src="images/device-logo1.svg" width="145" height="36" alt="Логотип сайта Девайс">
+          <img src="images/device-logo2.svg" width="145" height="36" alt="Логотип сайта Девайс">
         </a>
         <p class="footer-address">Санкт-Петербург, набережная
           реки Карповки, 5, литера П.</p>
+        <div class="yellow-stripe"></div>
       </section>
       <div class="footer-links">
         <section class="footer-info">

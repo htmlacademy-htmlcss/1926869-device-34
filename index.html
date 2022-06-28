@@ -56,36 +56,38 @@
               </a>
               <div class="popover">
 
-                  <h2 class="visually-hidden">Корзина</h2>
-                  <ul class="card-item-list">
-                    <li class="card-item">
-                      <a href="#">
-                        <img class="card-image" src="/images/catalog-image-1.jpg" width="39px" height="43px" alt="Любительская селфи-палка">
-                      </a>
-                      <a href="#" class="card-text">
-                        Любительская селфи-палка
-                      </a>
-                      <button type="button" class="card-button">
-                        <span class="visually-hidden">Удалить из карзины</span>
-                      </button>
-                    </li>
-                    <li class="card-item">
-                      <a href="#">
-                        <img class="card-image" src="/images/catalog-image-1.jpg" width="39px" height="43px" alt="Любительская селфи-палка">
-                      </a>
-                      <a href="#" class="card-text">
-                        Любительская селфи-палка
-                      </a>
-                      <button type="button" class="card-button">
-                        <span class="visually-hidden">Удалить из карзины</span>
-                      </button>
-                    </li>
-                  </ul>
-                    <div class="card-total">
-                      <div class="card-goods">Товаров: 2</div>
-                      <div class="card-price">Сумма: 2000 ₽</div>
-                    </div>
-                    <a class="card-basket-link" href="#">Открыть карзину</a>
+                <h2 class="visually-hidden">Корзина</h2>
+                <ul class="card-item-list">
+                  <li class="card-item">
+                    <a href="#">
+                      <img class="card-image" src="/images/catalog-image-1.jpg" width="39px" height="43px"
+                        alt="Любительская селфи-палка">
+                    </a>
+                    <a href="#" class="card-text">
+                      Любительская селфи-палка
+                    </a>
+                    <button type="button" class="card-button">
+                      <span class="visually-hidden">Удалить из карзины</span>
+                    </button>
+                  </li>
+                  <li class="card-item">
+                    <a href="#">
+                      <img class="card-image" src="/images/catalog-image-1.jpg" width="39px" height="43px"
+                        alt="Любительская селфи-палка">
+                    </a>
+                    <a href="#" class="card-text">
+                      Любительская селфи-палка
+                    </a>
+                    <button type="button" class="card-button">
+                      <span class="visually-hidden">Удалить из карзины</span>
+                    </button>
+                  </li>
+                </ul>
+                <div class="card-total">
+                  <div class="card-goods">Товаров: 2</div>
+                  <div class="card-price">Сумма: 2000 ₽</div>
+                </div>
+                <a class="card-basket-link" href="#">Открыть карзину</a>
 
               </div>
             </li>
@@ -471,7 +473,7 @@
         <h2 class="about-us-title">О нас</h2>
         <p class=" text-color-dark">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом
           из нас.</p>
-        <p class=" text-color-dark">Мы можем доставить ваш товар в самые отдалённые уголки России
+        <p class=" text-color-dark last-text">Мы можем доставить ваш товар в самые отдалённые уголки России
           транспортными компаниями:</p>
         <ul class="about-us-companies">
           <li class="about-us-companies-item">Меловые линии</li>
@@ -582,6 +584,47 @@
       </address>
     </div>
   </footer>
+
+  <div class="modal-container">
+    <div class="modal modal-auth">
+      <button class="modal-close-button" type="button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
+      <section class="modal-content">
+        <h2 class="modal-title">Доставка под заказ</h2>
+        <form class="auth-form" action="action=" https://echo.htmlacademy.ru/" method="post"">
+<div class=" data-container">
+          <p class="field-group">
+            <label class="modal-text" for="auth-name">Ваше имя:</label>
+            <input class="auth-form-data" type="text" id="auth-name" name="auth-name" placeholder="Введите имя">
+          </p>
+          <p class="field-group">
+            <label class="modal-text" for="auth-email">Ваш e-mail:</label>
+            <input class="auth-form-data" type="email" id="auth-email" name="auth-email" placeholder="почта">
+          </p>
+    </div>
+    <div class="amount-container">
+      <p class="field-group">
+        <label class="modal-text" for="auth-amount">Что нужно привезти:</label>
+        <input class="auth-form-data" type="text" id="auth-amount" name="auth-amount" placeholder="В свободной форме">
+      </p>
+      <div class="field-group">
+        <p class="modal-text modal-text-info">Количество:</p>
+        <div class="field-groip-button">
+          <button class="auth-button-amount button-down" type="button">
+            <span class="visually-hidden ">Убавить</span></button>
+          <p class="auth-button-amount">1</p>
+          <button class="auth-button-amount button-up" type="button">
+            <span class="visually-hidden">Добавить</span></button>
+        </div>
+      </div>
+    </div>
+    <button class="auth-button button-frame" type="submit">
+      <span class="button-frame">Отправить</span></button>
+    </form>
+    </section>
+  </div>
+  </div>
 </body>
 
 </html>

@@ -99,7 +99,7 @@
         <ul class="catalog-header-list">
           <li class="catalog-item">
             <a href="#" class="catalog-name">Каталог товаров</a>
-            <button class="button-catalog" type="button">
+            <button class="button-catalog states" type="button">
               <span class="visually-hidden">Открыть каталог</span>
             </button>
 
@@ -341,8 +341,7 @@
               <span class="visually-hidden">Моноподы для селфи</span>
               <img class="product-sections-image" width="86" height="117" src="images/image-categories_2.png" alt="">
             </div>
-            <h3 class="product-sections-title">Моноподы
-              для селфи</h3>
+            <h3 class="product-sections-title">Моноподы<br>для селфи</h3>
           </a>
         </li>
         <li class="product-sections-item">
@@ -469,7 +468,7 @@
       </a>
     </section>
     <div class="about-flex">
-      <section class="about-us">
+      <section class="about-us black-band">
         <h2 class="about-us-title">О нас</h2>
         <p class=" text-color-dark">Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом
           из нас.</p>
@@ -482,19 +481,19 @@
         </ul>
         <a class="button-detail-about button-frame" href="#">Подробнее о нас</a>
       </section>
-      <section class="contacts">
+      <section class="contacts black-band">
         <h2 class="about-title">Контакты</h2>
-        <p class=" text-color-dark">Вы можете забрать товар сами, заехав в наш офис.Заодно сможете проверить
+        <p class=" text-color-dark">Вы можете забрать товар сами, заехав в наш офис.<br>Заодно сможете проверить
           работоспособность покупки.</p>
         <h3 class="contacts-subtitle">Интернет-магазин «Девайс»</h3>
         <address class="contacts-address">
-          <p class="contacts-address-text text-color-dark">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
+          <p class="text-color-dark contacts-address-text ">Санкт-Петербург, набережная реки Карповки, 5, литера П.</p>
           <a class="contacts-phone text-color-dark" href="tel:+78128121212">+7 (812) 812-12-12</a>
         </address>
         <h3 class="working-hours">Время работы</h3>
         <ul class="contacts-schedule">
-          <li class="contacts-schedule-item text-color-dark">пн—пт: с 10:00 до 22:00</li>
-          <li class="contacts-schedule-item text-color-dark">сб—вс: с 10:00 до 19:00</li>
+          <li class="text-color-dark contacts-schedule-item ">пн—пт: с 10:00 до 22:00</li>
+          <li class="text-color-dark contacts-schedule-item ">сб—вс: с 10:00 до 19:00</li>
         </ul>
         <a class="button-detail-contacts button-frame" href="#">Напишите нам</a>
       </section>
@@ -515,7 +514,7 @@
               Подписаться
             </button>
           </form>
-          <p class="free-subscription text-color-dark">Это бесплатно</p>
+          <p class="text-color-dark free-subscription ">Это бесплатно</p>
         </div>
       </div>
     </section>
@@ -585,45 +584,50 @@
     </div>
   </footer>
 
-  <div class="modal-container">
+  <div class="modal-container modal-container-close">
     <div class="modal modal-auth">
-      <button class="modal-close-button" type="button">
+      <button class="modal-close-button states" type="button">
         <span class="visually-hidden">Закрыть</span>
       </button>
       <section class="modal-content">
         <h2 class="modal-title">Доставка под заказ</h2>
-        <form class="auth-form" action="action=" https://echo.htmlacademy.ru/" method="post"">
-<div class=" data-container">
-          <p class="field-group">
-            <label class="modal-text" for="auth-name">Ваше имя:</label>
-            <input class="auth-form-data" type="text" id="auth-name" name="auth-name" placeholder="Введите имя">
-          </p>
-          <p class="field-group">
-            <label class="modal-text" for="auth-email">Ваш e-mail:</label>
-            <input class="auth-form-data" type="email" id="auth-email" name="auth-email" placeholder="почта">
-          </p>
+        <form class="auth-form" action="https://echo.htmlacademy.ru/" method="post">
+          <div class=" data-container">
+            <p class="field-group">
+              <label class="modal-text" for="auth-name">Ваше имя:</label>
+              <input class="auth-form-data" type="text" id="auth-name" name="auth-name" placeholder="Введите имя">
+            </p>
+            <p class="field-group">
+              <label class="modal-text" for="auth-email">Ваш e-mail:</label>
+              <input class="auth-form-data" type="email" id="auth-email" name="auth-email" placeholder="почта">
+            </p>
+          </div>
+          <div class="amount-container">
+            <p class="field-group">
+              <label class="modal-text" for="auth-amount">Что нужно привезти:</label>
+              <input class="auth-form-data" type="text" id="auth-amount" name="auth-amount"
+                placeholder="В свободной форме">
+            </p>
+            <div class="field-group">
+              <a href="#" class="modal-text modal-text-info">Количество:
+                <p class="modal-text-info-window">Постараемся найти, сколько нужно. Привезём сколько получится по
+                  требованиям
+                  к провозу багажа.</p>
+              </a>
+              <div class="field-groip-button">
+                <button class="auth-button-amount button-down" type="button">
+                  <span class="visually-hidden ">Убавить</span></button>
+                <p class="auth-button-amount">1</p>
+                <button class="auth-button-amount button-up" type="button">
+                  <span class="visually-hidden">Добавить</span></button>
+              </div>
+            </div>
+          </div>
+          <button class="auth-button button-frame" type="submit">
+            <span class="button-frame">Отправить</span></button>
+        </form>
+      </section>
     </div>
-    <div class="amount-container">
-      <p class="field-group">
-        <label class="modal-text" for="auth-amount">Что нужно привезти:</label>
-        <input class="auth-form-data" type="text" id="auth-amount" name="auth-amount" placeholder="В свободной форме">
-      </p>
-      <div class="field-group">
-        <p class="modal-text modal-text-info">Количество:</p>
-        <div class="field-groip-button">
-          <button class="auth-button-amount button-down" type="button">
-            <span class="visually-hidden ">Убавить</span></button>
-          <p class="auth-button-amount">1</p>
-          <button class="auth-button-amount button-up" type="button">
-            <span class="visually-hidden">Добавить</span></button>
-        </div>
-      </div>
-    </div>
-    <button class="auth-button button-frame" type="submit">
-      <span class="button-frame">Отправить</span></button>
-    </form>
-    </section>
-  </div>
   </div>
 </body>
 

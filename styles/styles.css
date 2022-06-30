@@ -374,6 +374,7 @@ body {
   display: flex;
 }
 
+
 .subcatalog-digital {
   list-style-type: none;
   text-decoration: none;
@@ -401,7 +402,7 @@ body {
   padding: 2px 0;
 }
 
-.subcatalog-digital-item a:focus {
+.subcatalog-digital-item a:focus{
   border-bottom: 1px solid #000;
 }
 
@@ -455,6 +456,19 @@ body {
   outline: 2px solid #AF4FFF;
   outline-offset: 2px;
 }
+
+.catalog-name:focus-within .button-catalog::after{
+  content: "";
+  background-image: url(../images/minus.svg);
+  background-repeat: no-repeat;
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  bottom: 0;
+  right: 0;
+  align-items: center;
+}
+
 
 .advantages-information {
   text-transform: uppercase;

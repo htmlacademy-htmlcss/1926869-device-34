@@ -128,12 +128,15 @@ body {
 }
 
 .navigation-item:not(:last-child) {
-  margin-right: 20px;
+  margin-right: 22px;
 }
 
 .navigation-item:first-child {
-  flex-grow: 1;
+  margin-right: auto;
+}
 
+.link-opacity {
+  opacity: 0.3;
 }
 
 .basket-link {
@@ -244,6 +247,11 @@ body {
   width: 152px;
 }
 
+.card-item-link {
+  display: flex;
+  text-decoration: none;
+}
+
 .card-button {
   width: 10px;
   height: 10px;
@@ -255,11 +263,23 @@ body {
   margin-left: auto;
 }
 
+.card-button:hover {
+  opacity: 0.6;
+}
+
+.card-button:active {
+  opacity: 0.3;
+}
+
+.card-button:focus {
+  outline: 2px solid #AF4FFF;
+}
+
 .card-button::after,
 .card-button::before {
   content: "";
   position: absolute;
-  top: 0;
+  top: 50%;
   left: 0;
   width: 100%;
   height: 1px;
@@ -299,6 +319,19 @@ body {
   justify-content: center;
   margin: 20px;
   text-decoration: none;
+}
+
+.card-basket-link:hover {
+  background-color: #FFE17F;
+}
+
+.card-basket-link:active .card-basket-link-text {
+  opacity: 0.3;
+}
+
+.card-basket-link:focus {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
 }
 
 .item-hidden {
@@ -365,6 +398,11 @@ body {
 .subcatalog-digital-item a {
   text-decoration: none;
   color: #000;
+  padding: 2px 0;
+}
+
+.subcatalog-digital-item a:focus {
+  border-bottom: 1px solid #000;
 }
 
 .catalog-name {
@@ -376,9 +414,11 @@ body {
   letter-spacing: 0.2em;
   font-weight: 800;
   font-size: 18px;
-  margin-right: 17px;
   color: #000;
   text-decoration: none;
+  display: flex;
+  align-items: center;
+
 }
 
 .button-catalog {
@@ -391,6 +431,7 @@ body {
   border-radius: 50%;
   position: relative;
   cursor: pointer;
+  margin-left: 17px;
 }
 
 .button-catalog::after {
@@ -408,6 +449,11 @@ body {
 .button-catalog:hover,
 .button-catalog:active {
   opacity: 1;
+}
+
+.catalog-name:focus-within {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
 }
 
 .advantages-information {
@@ -440,7 +486,11 @@ body {
   line-height: 21px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+  padding: 4px 0;
+}
 
+.advatrages-information-link:focus {
+  border-bottom: 2px solid #000;
 }
 
 .product-flex {
@@ -564,7 +614,6 @@ body {
 .button-frame:active::after,
 .button-frame:active {
   background-color: #FFCC33;
-  z-index: -1;
 }
 
 
@@ -877,7 +926,7 @@ body {
   width: 171px;
   height: 195px;
   top: 0;
-  right: -200px;
+  right: -261px;
 }
 
 .list-3::after {
@@ -888,7 +937,7 @@ body {
   width: 156px;
   height: 188px;
   top: 0;
-  right: -200px;
+  right: -261px;
 }
 
 .buying-title {
@@ -967,6 +1016,25 @@ body {
   display: flex;
 }
 
+.input-form {
+  display: flex;
+}
+
+.label-form {
+  position: relative;
+}
+
+.form-error-text {
+  font-size: 14px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  color: #FF3D3D;
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+}
+
 .appointment-input {
   width: 558px;
   background-color: inherit;
@@ -976,6 +1044,7 @@ body {
   padding: 16px 16px 14px 16px;
   font-family: inherit;
   font-size: 18px;
+
 }
 
 .appointment-input:focus {
@@ -997,7 +1066,7 @@ body {
 
 .appointment-button {
   border: 3px solid #C4C4C4;
-  padding: 16px 35px;
+  padding: 15px 35px;
   cursor: pointer;
 
 
@@ -1184,7 +1253,7 @@ body {
 }
 
 .about-us {
-  margin-right: 145px;
+  margin-right: 148px;
   width: 480px;
 }
 
@@ -1545,6 +1614,7 @@ body {
 .filter-pagination-button:focus {
   outline: 2px solid #AF4FFF;
   outline-offset: 2px;
+  opacity: 1;
 }
 
 .filter-pagination-button:hover {
@@ -1607,7 +1677,9 @@ body {
   padding: 0;
   border: none;
   margin-bottom: 32px;
+
 }
+
 
 .control {
   display: block;
@@ -1619,14 +1691,23 @@ body {
   background-image: url(../images/check-mark.svg);
   background-repeat: no-repeat;
   background-position: center center;
+  border: 2px solid #000;
 }
 
 .control-input:disabled+.control-mark {
   border: 2px solid #CCCCCC;
 }
 
+.control-input+.control-mark {
+  border: 2px solid #CCCCCC;
+}
+
 .control-input[type="radio"]+.control-mark {
   border-radius: 50%;
+}
+
+.control-input[type="radio"]:checked+.control-mark {
+  border: 2px solid #000;
 }
 
 .control-input[type="radio"]:checked+.control-mark::after {
@@ -1649,6 +1730,12 @@ body {
   line-height: 19px;
 }
 
+.control:focus-within .control-mark {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+
 .control-mark {
   position: absolute;
   left: 0;
@@ -1667,6 +1754,26 @@ body {
   letter-spacing: -0.02em;
   padding-top: 14px;
   margin-bottom: 28px;
+}
+
+.filter-title-color {
+  margin-bottom: 16px;
+}
+
+.catalog-filter-item {
+  margin-bottom: 7px;
+}
+
+.filter-group-color {
+  margin-bottom: -4px;
+}
+
+.filter-title-bt {
+  margin-bottom: 15px;
+}
+
+.filter-group-bt {
+  margin-bottom: 0;
 }
 
 .catalog-filter-title::after {
@@ -1783,6 +1890,7 @@ body {
 
 .text-sort {
   margin-top: 5px;
+  margin-bottom: 0;
 }
 
 .select-control {
@@ -1828,6 +1936,7 @@ body {
   padding: 0;
   position: relative;
   z-index: 10;
+  background-color: inherit;
 }
 
 .product-card-price {
@@ -1927,8 +2036,8 @@ body {
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 800;
-  font-size: 18px;
-  line-height: 21px;
+  font-size: 16px;
+  line-height: 19px;
   align-items: center;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -1994,13 +2103,15 @@ body {
 }
 
 .product-link:hover img,
-.product-link:hover .product-card-container {
+.product-link:hover .product-card-container,
+.product-item:hover .product-link--new::after {
   opacity: 0.6;
 }
 
 
 .product-link:active img,
-.product-link:active .product-card-container {
+.product-link:active .product-card-container,
+.product-item:active .product-link--new::after {
   opacity: 0.3;
 }
 
@@ -2022,20 +2133,39 @@ body {
 
 .product-card-image {
   display: block;
-  margin-bottom: 32px;
+  margin-bottom: 34px;
+}
+
+.product-link--new {
+  position: relative;
+}
+
+.product-link--new::after {
+  position: absolute;
+  content: "";
+  top: 27px;
+  right: 27px;
+  width: 60px;
+  height: 60px;
+  background-image: url(../images/product-new.svg);
+  background-repeat: no-repeat;
 }
 
 .pagination-catalog {
   font-family: 'Raleway';
-  color: #000000;
+  font-style: normal;
+  font-weight: 800;
   font-size: 18px;
   line-height: 21px;
+  display: flex;
   align-items: center;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   padding: 25px;
   display: block;
   height: 71px;
   text-decoration: none;
+  color: #000;
 }
 
 .pagination-catalog:focus {
@@ -2072,6 +2202,7 @@ body {
 .pagination-link:focus {
   outline: 2px solid #AF4FFF;
   outline-offset: 2px;
+  opacity: 1;
 }
 
 .pagination-link:hover {
@@ -2192,7 +2323,6 @@ body {
   left: 153px;
 }
 
-.modal-text-info:hover .modal-text-info-window,
 .modal-text-info:focus .modal-text-info-window {
   display: block;
 }

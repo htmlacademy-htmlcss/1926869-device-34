@@ -200,7 +200,7 @@ body {
   background-color: #000000;
   color: #ffffff;
   z-index: 10;
-  /* display: none; */
+  display: none;
 }
 
 .popover-open {
@@ -223,6 +223,15 @@ body {
 .card-item {
   display: flex;
   padding: 20px;
+}
+
+.card-link:focus {
+  outline: 2px solid #af4fff;
+  outline-offset: 2px;
+}
+
+.card-link {
+  display: flex;
 }
 
 .card-item:not(:last-child) {
@@ -1040,6 +1049,7 @@ body {
   position: absolute;
   bottom: -25px;
   left: 0;
+  display: none;
 }
 
 .appointment-input {

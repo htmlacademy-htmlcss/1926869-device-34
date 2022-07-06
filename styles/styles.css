@@ -1013,6 +1013,7 @@ img {
 
 .product-order {
   display: flex;
+  flex-wrap: wrap;
   width: 1160px;
   margin: 0 auto;
   justify-content: space-between;
@@ -1250,7 +1251,7 @@ img {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   position: relative;
-  padding-top: 6px;
+  padding: 6px 130px 0 130px;
 }
 
 .product-order-link::after {
